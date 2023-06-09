@@ -1,0 +1,271 @@
+.nav{
+    background-color:  #29468c;
+    height: 45px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.inner_nav{
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.div_one{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+}
+
+.div_one div{
+    width: 2px;
+    height: 17.5px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.div_two{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.div_two div{
+    width: 2px;
+    height: 17.5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.div_three {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.div_three div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-block:5px;
+}
+
+.div_three div:nth-child(1) p:nth-child(1){
+    background-color: white;
+    height: 25px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.div_three div:nth-child(1) p:nth-child(2){
+    background-color: #4c4c4c;
+    height: 25px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-weight: 700;
+    border: 1px solid white;
+    color: white;
+}
+
+.div_three div:nth-child(1) p:nth-child(3){
+    background-color: black;
+    height: 25px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-weight: 700;
+    border: 1px solid white;
+    color: white;
+}
+
+
+.div_three div:nth-child(2) p{
+    background-color: white;
+    height: 25px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.div_four .search{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    position: relative;
+}
+.div_four .search input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding-inline: 10px;
+    padding-block: 3px;
+    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.div_four .search input:focus{
+    border:none
+}
+
+.div_four .search div{
+    background-color: rgb(207, 207, 207);
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 26px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+
+.sub_header{
+    height: 100px;
+    padding-inline: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub_header .sub_left{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sub_header .sub_left div:nth-child(1){
+    width: 94px;
+    height: 83px;
+}
+
+.sub_header .sub_left div:nth-child(1) img{
+    width: 100%;
+    height: 100%;
+}
+
+.sub_header .sub_left div:nth-child(2) p:nth-child(1){
+    font-size: 19px;
+    font-weight: 600;
+    color: #29468c;
+}
+
+.sub_header .sub_left div:nth-child(2) p:nth-child(2){
+    font-size: 13px;
+    font-weight: 600;
+    color:#007cb0 
+}
+
+.sub_header .sub_left div:nth-child(2) p:nth-child(3){
+    font-size: 13px;
+    font-weight: 700;
+    color:black; 
+}
+
+.sub_right{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sub_right div{
+    width: 83px;
+    height: 83px;
+}
+
+.sub_right div img{
+    width: 100%;
+    height: 100%;
+}
+
+.sub_header_two{
+    height: 45px;
+    background-color: #29468c;
+    color: white;
+}
+
+.inner_sub_header_two{
+    width: 95%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .3rem;
+}
+
+.inner_sub_header_two .active{
+    background-color: #1264a3;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.inner_sub_header_two > div{
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown{
+    position: absolute;
+    left: 0;
+    top: 33px;
+    background-color: #29468c;
+    width: 250px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.dropdown div{
+    height: auto;
+    width: 100%;
+    border-bottom: 1px solid white;
+    padding: 8px ;
+}
+
+.dropdown .dropdown_active{
+    background-color: #1264a3;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.dropdown div p{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+.inner_sub_header_two div div{
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_icon{
+    font-size: 20px !important;
+    cursor: pointer !important;
+}

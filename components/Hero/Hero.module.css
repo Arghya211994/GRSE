@@ -1,0 +1,30 @@
+.carousel_container{
+    height: 70vh;
+    width: 100%;
+}
+
+.carousel_container2{
+    height: 45px;
+    width: 100%;
+    background-color: #f1cc387d ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.main_alert{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alert{
+    width: 200px !important;
+    background-color: #f1cb38;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
