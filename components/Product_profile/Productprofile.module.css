@@ -5,7 +5,7 @@
 
 .container > p{
     font-size: 20px;
-    color: #29468c;
+    color: var(--header-background);
     font-weight: 600;
     margin-top: 20px;
     margin-bottom: 20px;

@@ -1,6 +1,7 @@
 .carousel_container{
     height: 70vh;
-    width: 100%;
+    width: 85%;
+    margin: auto;
 }
 
 .carousel_container2{

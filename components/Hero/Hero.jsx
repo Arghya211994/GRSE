@@ -16,12 +16,12 @@ const Hero = () => {
       transform: 'translateY(-50%)',
       zIndex: 2,
       cursor: 'pointer',
-      backgroundColor: "rgb(41, 70, 140,0.7)",
+      backgroundColor: "#07222e",
       padding: '10px',
       fontSize: '2rem',
       border:"none",
-      height:"60px",
-      width:"60px",
+      height:"50px",
+      width:"50px",
       display: "flex",
       justifyContent:"center",
       alignItems: "center",
@@ -39,12 +39,12 @@ const Hero = () => {
       transform: 'translateY(-50%)',
       zIndex: 2,
       cursor: 'pointer',
-      backgroundColor: "rgb(41, 70, 140,0.7)",
+      backgroundColor: "#07222e",
       padding: '10px',
       fontSize: '2rem',
       border:"none",
-      height:"60px",
-      width:"60px",
+      height:"50px",
+      width:"50px",
       display: "flex",
       justifyContent:"center",
       alignItems: "center",
@@ -126,7 +126,7 @@ const Hero = () => {
           </button>
         )
       }
-      autoPlay={false}
+      autoPlay={true}
       showStatus={false}
       >
         <div className={styles.carousel_container}>

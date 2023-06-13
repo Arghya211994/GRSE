@@ -100,18 +100,19 @@ const Header = () => {
           </div>
 
           <div 
-          className={styles.active} 
           onMouseEnter={() => setDropdown1(true)} 
-          onMouseLeave={() => setDropdown1(false)}>
+          onMouseLeave={() => setDropdown1(false)}
+          className={styles.content_box}
+          >
             <p>About Us</p>
-            <div>
+            <div className={styles.chevron_color}>
               <BiChevronDown />
             </div>
 
             {
               dropdown1 && <div className={styles.dropdown}>
                 <div>
-                  <p className={styles.dropdown_active}>Shipbuilding & Repair</p>
+                  <p >Shipbuilding & Repair</p>
                 </div>
 
                 <div>
@@ -143,19 +144,20 @@ const Header = () => {
 
           </div>
 
-          <div className={styles.active}
+          <div
           onMouseEnter={() => setDropdown2(true)} 
           onMouseLeave={() => setDropdown2(false)}
+          className={styles.content_box}
           >
             <p>Product Profile</p>
-            <div>
+            <div className={styles.chevron_color}>
               <BiChevronDown />
             </div>
 
             {
               dropdown2 && <div className={styles.dropdown}>
                 <div>
-                  <p className={styles.dropdown_active}>Shipbuilding & Repair</p>
+                  <p>Shipbuilding & Repair</p>
                 </div>
 
                 <div>
@@ -173,16 +175,17 @@ const Header = () => {
           <div
            onMouseEnter={() => setDropdown3(true)} 
            onMouseLeave={() => setDropdown3(false)}
+           className={styles.content_box}
           >
             <p>Infrastructure</p>
-            <div>
+            <div className={styles.chevron_color}>
               <BiChevronDown />
             </div>
 
             {
               dropdown3 && <div className={styles.dropdown}>
                 <div>
-                  <p className={styles.dropdown_active}>Shipbuilding & Repair</p>
+                  <p>Shipbuilding & Repair</p>
                 </div>
 
                 <div>
@@ -204,16 +207,17 @@ const Header = () => {
           <div
            onMouseEnter={() => setDropdown4(true)} 
            onMouseLeave={() => setDropdown4(false)}
+           className={styles.content_box}
           >
             <p>Achievements</p>
-            <div>
+            <div className={styles.chevron_color}>
               <BiChevronDown />
             </div>
 
             {
               dropdown4 && <div className={styles.dropdown}>
                 <div>
-                  <p className={styles.dropdown_active}>Shipbuilding & Repair</p>
+                  <p>Shipbuilding & Repair</p>
                 </div>
 
                 <div>
@@ -235,16 +239,17 @@ const Header = () => {
           <div
            onMouseEnter={() => setDropdown5(true)} 
            onMouseLeave={() => setDropdown5(false)}
+           className={styles.content_box}
           >
             <p>News Room</p>
-            <div>
+            <div className={styles.chevron_color}>
               <BiChevronDown />
             </div>
 
             {
               dropdown5 && <div className={styles.dropdown}>
                 <div>
-                  <p className={styles.dropdown_active}>Shipbuilding & Repair</p>
+                  <p>Shipbuilding & Repair</p>
                 </div>
 
                 <div>
@@ -262,16 +267,17 @@ const Header = () => {
           <div
            onMouseEnter={() => setDropdown6(true)} 
            onMouseLeave={() => setDropdown6(false)}
+           className={styles.content_box}
           >
             <p>Investor's Corner</p>
-            <div>
+            <div className={styles.chevron_color}>
               <BiChevronDown />
             </div>
 
             {
               dropdown6 && <div className={styles.dropdown}>
                 <div>
-                  <p className={styles.dropdown_active}>Shipbuilding & Repair</p>
+                  <p>Shipbuilding & Repair</p>
                 </div>
 
                 <div>
@@ -306,16 +312,17 @@ const Header = () => {
           <div
            onMouseEnter={() => setDropdown7(true)} 
            onMouseLeave={() => setDropdown7(false)}
+           className={styles.content_box}
           >
             <p>Public Grievances</p>
-            <div>
+            <div className={styles.chevron_color}>
               <BiChevronDown />
             </div>
 
             {
               dropdown7 && <div className={styles.dropdown}>
                 <div>
-                  <p className={styles.dropdown_active}>Shipbuilding & Repair</p>
+                  <p>Shipbuilding & Repair</p>
                 </div>
 
                 <div>
@@ -337,16 +344,17 @@ const Header = () => {
           <div
            onMouseEnter={() => setDropdown8(true)} 
            onMouseLeave={() => setDropdown8(false)}
+           className={styles.content_box}
           >
             <p>CSR</p>
-            <div>
+            <div className={styles.chevron_color}>
               <BiChevronDown />
             </div>
 
             {
               dropdown8 && <div className={styles.dropdown}>
                 <div>
-                  <p className={styles.dropdown_active}>Shipbuilding & Repair</p>
+                  <p>Shipbuilding & Repair</p>
                 </div>
 
                 <div>
@@ -365,36 +373,7 @@ const Header = () => {
             }
           </div>
 
-          <div
-           onMouseEnter={() => setDropdown9(true)} 
-           onMouseLeave={() => setDropdown9(false)}
-          >
-            <p>Contact Us</p>
-            <div>
-              <BiChevronDown />
-            </div>
-
-            {
-              dropdown9 && <div className={styles.dropdown}>
-                <div>
-                  <p className={styles.dropdown_active}>Shipbuilding & Repair</p>
-                </div>
-
-                <div>
-                  <p>Engineering</p>
-                </div>
-
-                <div>
-                  <p>Engine</p>
-                </div>
-
-                <div>
-                  <p>Technical Training Center</p>
-                </div>
-
-              </div>
-            }
-          </div>
+          <p className={styles.contact}>Contact Us</p>
         </div>
       </nav>
     </>
