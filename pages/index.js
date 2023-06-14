@@ -13,7 +13,7 @@ const index = () => {
     <>
     <Layout>
       <Hero/>
-      {/* <Content/> */}
+      <Content/>
       <Productprofile/>
       <Carousel2/>
       <Events/>

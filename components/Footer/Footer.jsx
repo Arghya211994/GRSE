@@ -1,20 +1,28 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './Footer.module.css'
 import { BsFacebook } from 'react-icons/bs'
 import { FaInstagramSquare } from 'react-icons/fa'
 import { BsYoutube } from 'react-icons/bs'
 import { BsTwitter } from 'react-icons/bs'
 import { AiFillLinkedin } from 'react-icons/ai'
+import { FontContext } from '@/Context/FontContext'
 
 const Footer = () => {
+
+  const {size} = useContext(FontContext)
+
+  //fontpart
+  const fontSize1 = `calc(${size}px + 6px)`
+  const fontSize2 = size
+  const fontSize3 = `calc(${size}px - 2px)`
   return (
     <>
       <main className={styles.container}>
         <div className={styles.content}>
           <div>
-            <p>Legal</p>
+            <p style={{fontSize:fontSize1}}>Legal</p>
 
-            <div>
+            <div style={{fontSize:fontSize2}}>
               <p>Terms & Conditions</p>
               <p>Hyper Linking Policy</p>
               <p>Copyright Policy</p>
@@ -23,7 +31,7 @@ const Footer = () => {
               <p>Disclaimer Policy</p>
             </div>
 
-            <p>Social Media</p>
+            <p style={{fontSize:fontSize1}}>Social Media</p>
 
             <div className={styles.socialmedia}>
               <span><img src="https://www.grse.in/social-icons/facebook.png" alt="" /></span>
@@ -35,9 +43,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <p>Quick Links</p>
+            <p style={{fontSize:fontSize1}}>Quick Links</p>
 
-            <div>
+            <div style={{fontSize:fontSize2}}>
               <p>Terms & Conditions</p>
               <p>Hyper Linking Policy</p>
               <p>Copyright Policy</p>
@@ -50,9 +58,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <p>Other Links</p>
+            <p style={{fontSize:fontSize1}}>Other Links</p>
 
-            <div>
+            <div style={{fontSize:fontSize2}}>
               <p>Terms & Conditions</p>
               <p>Hyper Linking Policy</p>
               <p>Copyright Policy</p>
@@ -62,14 +70,14 @@ const Footer = () => {
               <p>Security Policy</p>
             </div>
 
-            <p>Employee Corner</p>
+            <p style={{fontSize:fontSize1}}>Employee Corner</p>
 
-            <p>Higher Pension Scheme</p>
+            <p style={{fontSize:fontSize2}}>Higher Pension Scheme</p>
 
           </div>
 
           <div>
-            <p>Go To</p>
+            <p style={{fontSize:fontSize1}}>Go To</p>
 
             <div>
               <div><img src="https://www.grse.in/wp-content/uploads/2022/05/IIG.png" alt="imag1" /></div>
@@ -90,12 +98,12 @@ const Footer = () => {
             <div><img src="https://www.grse.in/wp-content/uploads/2022/06/wcag2A.png" alt="img2" /></div>
           </div>
 
-          <p>Copyright © 2023 - All Rights Reserved - Official website of Garden Reach
+          <p style={{fontSize:fontSize3}}>Copyright © 2023 - All Rights Reserved - Official website of Garden Reach
             Shipbuilders and Engineers Limited - A Government of India undertaking,
             Ministry of Defence 
           </p>
 
-          <p>Last Modified: June 09, 2023 @ 04:53 am.</p>
+          <p style={{fontSize:fontSize3}}>Last Modified: June 09, 2023 @ 04:53 am.</p>
         </div>
       </main>
     </>

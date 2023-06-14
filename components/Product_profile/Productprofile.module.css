@@ -54,8 +54,9 @@
 
 .item1{
     border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px 0px;
+    box-shadow: rgba(0,0,0,0.2) 0px 5px 15px 0px;
     padding-block: 30px;
+    background-color: #fff;
 }
 
 .item1 div{
@@ -90,8 +91,9 @@
 
 .item2{
     border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px 0px;
+    box-shadow: rgba(0,0,0,0.2) 0px 5px 15px 0px;
     padding-block: 30px;
+    background-color: #fff;
 }
 
 .item2 div{
@@ -126,8 +128,9 @@
 
 .item3{
     border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px 0px;
+    box-shadow: rgba(0,0,0,0.2) 0px 5px 15px 0px;
     padding-block: 30px;
+    background-color: #fff;
 }
 
 .item3 div{
@@ -162,8 +165,9 @@
 
 .item4{
     border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px 0px;
+    box-shadow: rgba(0,0,0,0.2) 0px 5px 15px 0px;
     padding-block: 30px;
+    background-color: #fff;
 }
 
 .item4 div{
@@ -200,6 +204,7 @@
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px 0px;
     padding-block: 30px;
+    background-color: #fff;
 }
 
 .item5 div{
@@ -235,6 +240,7 @@
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px 0px;
     padding-block: 30px;
+    background-color: #fff;
 }
 
 .item6 div{
@@ -270,6 +276,7 @@
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px 0px;
     padding-block: 30px;
+    background-color: #fff;
 }
 
 .item7 div{
@@ -305,6 +312,7 @@
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px 0px;
     padding-block: 30px;
+    background-color: #fff;
 }
 
 .item8 div{

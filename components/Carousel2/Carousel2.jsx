@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './Carousel.module.css'
 import { Carousel } from 'react-responsive-carousel'
 import {FaChevronLeft,FaChevronRight} from 'react-icons/fa'
+import { FontContext } from '@/Context/FontContext'
 
 const Carousel2 = () => {
+
+    const {size} = useContext(FontContext)
+
+    //font sizes
+    const fontSize1 = `calc(${size}px + 17px)`
+    const fontSize2 = `calc(${size}px - 2px)`
+    const fontSize3 = size
+
+
     const customArrowPropsPrev = {
         // Define the styles for the custom arrows
         style: {
@@ -75,8 +85,8 @@ const Carousel2 = () => {
                     <div className={styles.carousel_container}>
                         <div className={styles.inner_carousel_content}>
                             <div>
-                                <p>Make In India</p>
-                                <p>GRSE has developed in-house capabilities to design & build most 
+                                <p style={{fontSize:fontSize1}}>Make In India</p>
+                                <p style={{fontSize:fontSize2}}>GRSE has developed in-house capabilities to design & build most 
                                     modern warships in the country. Presently the shipyard is building 
                                     03 P17A Advanced Frigates, 04 Survey Vessels (Large), 08 Anti-Submarine
                                      Warfare Shallow Water Crafts, 01 Fast Patrol Vessel, 01 Ocean Going 
@@ -96,7 +106,7 @@ const Carousel2 = () => {
                                        content and is a prime supplier of Rail-less Helicopter Traversing 
                                        System to Indian Navy and Indian Coast Guard.......</p>
 
-                                <button>More</button>
+                                <button style={{fontSize:fontSize3}}>More</button>
                             </div>
 
                             <div>
@@ -109,10 +119,10 @@ const Carousel2 = () => {
                     <div className={styles.carousel_container}>
                     <div className={styles.inner_carousel_content}>
                             <div>
-                                <p>Swachh Bharat Abhiyaan</p>
-                                <p>The Company has joined the call of the Prime Minister for Swachh Bharat Mission. Some of the initiatives include :-Construction of toilets in local schools under Swachh Vidyalaya, Improvement of Anganwadi centres of Metiabruz in collaboration with CII, Training to school children for sanitation and hygiene practices under Swachh Bharat Mission, Study by TISS for Swachh Bharat Mission Roadmap, Contribution to Swachh Bharat Kosh and Clean Ganga Fund. GRSE has contributed Rs. 75 lakh towards Swachh Bharat Kosh and of Rs. 25 lakh towards Clean Ganga Fund...</p>
+                                <p style={{fontSize:fontSize1}}>Swachh Bharat Abhiyaan</p>
+                                <p style={{fontSize:fontSize2}}>The Company has joined the call of the Prime Minister for Swachh Bharat Mission. Some of the initiatives include :-Construction of toilets in local schools under Swachh Vidyalaya, Improvement of Anganwadi centres of Metiabruz in collaboration with CII, Training to school children for sanitation and hygiene practices under Swachh Bharat Mission, Study by TISS for Swachh Bharat Mission Roadmap, Contribution to Swachh Bharat Kosh and Clean Ganga Fund. GRSE has contributed Rs. 75 lakh towards Swachh Bharat Kosh and of Rs. 25 lakh towards Clean Ganga Fund...</p>
 
-                                <button>More</button>
+                                <button style={{fontSize:fontSize3}}>More</button>
                             </div>
 
                             <div>

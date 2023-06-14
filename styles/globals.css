@@ -7,5 +7,19 @@
 }
 
 :root{
-    --header-background:#07222e
+    --header-background:#07222e;
+    --color: green;
+
+    /* darkmode */
+    --primary-bg-dark-color: #07222e;
+    --primary-font-dark-color:#1d3684;
+    --secondary-bg-dark-color:#efefef;
+    --primary-dark-boxshadow: rgba(0,0,0,0.2) 0px 5px 15px 0px;
+
+    /* lightmode */
+    --primary-bg-light-color: #1d3684;
+    --primary-font-light-color:#fff;
+    --secondary-bg-light-color: #050505;
+    --primary-light-boxshadow: rgba(255,255,255,0.6) 0px 5px 15px 0px;
+
 }

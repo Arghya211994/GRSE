@@ -1,8 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import styles from './Header.module.css'
 import { BiSearch } from 'react-icons/bi'
 import { AiFillHome } from 'react-icons/ai'
 import { BiChevronDown } from 'react-icons/bi'
+
+import { ThemeContext
+ } from '@/Context/ThemeContext'
+import { FontContext } from '@/Context/FontContext'
 
 const Header = () => {
 
@@ -14,11 +18,25 @@ const Header = () => {
   const [dropdown6, setDropdown6] = useState(false)
   const [dropdown7, setDropdown7] = useState(false)
   const [dropdown8, setDropdown8] = useState(false)
-  const [dropdown9, setDropdown9] = useState(false)
 
+  const { theme, changeToLightTheme, changeToDarkTheme, themeVariables} = useContext(ThemeContext);
+  const {size, increase, normal , decrease} = useContext(FontContext)
+
+  //for sub-header
+  const font_sub_header1 = `calc(${size}px + 3px)`
+  const font_sub_header2 = `calc(${size}px - 3px)`
+  //for dropdown header
+  const fontSizenew = `calc(${size}px - 2px)`
+
+ 
   return (
     <>
-      <nav className={styles.nav}>
+      <nav className={styles.nav} 
+      style={{
+        backgroundColor: themeVariables.backgroundColor,
+        fontSize:`${size}px`
+      }}
+      >
         <div className={styles.inner_nav}>
           <div className={styles.div_one}>
             <p>Screen Reader Access</p>
@@ -34,15 +52,26 @@ const Header = () => {
 
           <div className={styles.div_three}>
             <div>
-              <p>A</p>
-              <p>A</p>
-              <p>A</p>
+              <p 
+              style={{cursor:"pointer"}}
+              onClick={changeToLightTheme}
+              >A</p>
+              <p
+              style={{cursor:"pointer"}}
+              onClick={changeToDarkTheme}
+              >A</p>
             </div>
 
             <div>
-              <p>A+</p>
-              <p>A</p>
-              <p>A-</p>
+              <p onClick={increase}
+              style={{cursor:"pointer"}}
+              >A+</p>
+              <p onClick={normal}
+              style={{cursor:"pointer"}}
+              >A</p>
+              <p onClick={decrease}
+              style={{cursor:"pointer"}}
+              >A-</p>
             </div>
           </div>
 
@@ -63,9 +92,9 @@ const Header = () => {
           </div>
 
           <div>
-            <p>GARDEN REACH SHIPBUILDERS AND ENGINEERS LIMITED</p>
-            <p>A GOVERNMENT OF INDIA UNDERTAKING - MINISTRY OF DEFENCE</p>
-            <p>"AN ISO 9001:2015 CERTIFIED COMPANY"</p>
+            <p style={{fontSize:font_sub_header1}}>GARDEN REACH SHIPBUILDERS AND ENGINEERS LIMITED</p>
+            <p style={{fontSize:font_sub_header2}}>A GOVERNMENT OF INDIA UNDERTAKING - MINISTRY OF DEFENCE</p>
+            <p style={{fontSize:font_sub_header2}}>"AN ISO 9001:2015 CERTIFIED COMPANY"</p>
           </div>
         </div>
 
@@ -93,7 +122,9 @@ const Header = () => {
         </div>
       </nav>
 
-      <nav className={styles.sub_header_two}>
+      <nav className={styles.sub_header_two}
+      style={{backgroundColor:themeVariables.backgroundColor}}
+      >
         <div className={styles.inner_sub_header_two}>
           <div className={styles.home_icon}>
             <AiFillHome />
@@ -104,7 +135,7 @@ const Header = () => {
           onMouseLeave={() => setDropdown1(false)}
           className={styles.content_box}
           >
-            <p>About Us</p>
+            <p style={{fontSize:fontSizenew}}>About Us</p>
             <div className={styles.chevron_color}>
               <BiChevronDown />
             </div>
@@ -112,31 +143,31 @@ const Header = () => {
             {
               dropdown1 && <div className={styles.dropdown}>
                 <div>
-                  <p >Shipbuilding & Repair</p>
+                  <p style={{background:"#058be4",fontSize:fontSizenew}}>Shipbuilding & Repair</p>
                 </div>
 
                 <div>
-                  <p>Engineering</p>
+                  <p style={{fontSize:fontSizenew}}>Engineering</p>
                 </div>
 
                 <div>
-                  <p>Engine</p>
+                  <p style={{fontSize:fontSizenew}}>Engine</p>
                 </div>
 
                 <div>
-                  <p>Technical Training Center</p>
+                  <p style={{fontSize:fontSizenew}}>Technical Training Center</p>
                 </div>
 
                 <div>
-                  <p>Engineering</p>
+                  <p style={{fontSize:fontSizenew}}>Engineering</p>
                 </div>
 
                 <div>
-                  <p>Engine</p>
+                  <p style={{fontSize:fontSizenew}}>Engine</p>
                 </div>
 
                 <div>
-                  <p>Technical Training Center</p>
+                  <p style={{fontSize:fontSizenew}}>Technical Training Center</p>
                 </div>
 
               </div>
@@ -149,7 +180,7 @@ const Header = () => {
           onMouseLeave={() => setDropdown2(false)}
           className={styles.content_box}
           >
-            <p>Product Profile</p>
+            <p style={{fontSize:fontSizenew}}>Product Profile</p>
             <div className={styles.chevron_color}>
               <BiChevronDown />
             </div>
@@ -157,15 +188,15 @@ const Header = () => {
             {
               dropdown2 && <div className={styles.dropdown}>
                 <div>
-                  <p>Shipbuilding & Repair</p>
+                  <p style={{fontSize:fontSizenew}}>Shipbuilding & Repair</p>
                 </div>
 
                 <div>
-                  <p>Engineering</p>
+                  <p style={{fontSize:fontSizenew}}>Engineering</p>
                 </div>
 
                 <div>
-                  <p>Technical Training Center</p>
+                  <p style={{fontSize:fontSizenew}}>Technical Training Center</p>
                 </div>
 
               </div>
@@ -177,7 +208,7 @@ const Header = () => {
            onMouseLeave={() => setDropdown3(false)}
            className={styles.content_box}
           >
-            <p>Infrastructure</p>
+            <p style={{fontSize:fontSizenew}}>Infrastructure</p>
             <div className={styles.chevron_color}>
               <BiChevronDown />
             </div>
@@ -185,19 +216,19 @@ const Header = () => {
             {
               dropdown3 && <div className={styles.dropdown}>
                 <div>
-                  <p>Shipbuilding & Repair</p>
+                  <p style={{fontSize:fontSizenew}}>Shipbuilding & Repair</p>
                 </div>
 
                 <div>
-                  <p>Engineering</p>
+                  <p style={{fontSize:fontSizenew}}>Engineering</p>
                 </div>
 
                 <div>
-                  <p>Engine</p>
+                  <p style={{fontSize:fontSizenew}}>Engine</p>
                 </div>
 
                 <div>
-                  <p>Technical Training Center</p>
+                  <p style={{fontSize:fontSizenew}}>Technical Training Center</p>
                 </div>
 
               </div>
@@ -209,7 +240,7 @@ const Header = () => {
            onMouseLeave={() => setDropdown4(false)}
            className={styles.content_box}
           >
-            <p>Achievements</p>
+            <p style={{fontSize:fontSizenew}}>Achievements</p>
             <div className={styles.chevron_color}>
               <BiChevronDown />
             </div>
@@ -217,19 +248,19 @@ const Header = () => {
             {
               dropdown4 && <div className={styles.dropdown}>
                 <div>
-                  <p>Shipbuilding & Repair</p>
+                  <p style={{fontSize:fontSizenew}}>Shipbuilding & Repair</p>
                 </div>
 
                 <div>
-                  <p>Engineering</p>
+                  <p style={{fontSize:fontSizenew}}>Engineering</p>
                 </div>
 
                 <div>
-                  <p>Engine</p>
+                  <p style={{fontSize:fontSizenew}}>Engine</p>
                 </div>
 
                 <div>
-                  <p>Technical Training Center</p>
+                  <p style={{fontSize:fontSizenew}}>Technical Training Center</p>
                 </div>
 
               </div>
@@ -241,7 +272,7 @@ const Header = () => {
            onMouseLeave={() => setDropdown5(false)}
            className={styles.content_box}
           >
-            <p>News Room</p>
+            <p style={{fontSize:fontSizenew}}>News Room</p>
             <div className={styles.chevron_color}>
               <BiChevronDown />
             </div>
@@ -249,15 +280,15 @@ const Header = () => {
             {
               dropdown5 && <div className={styles.dropdown}>
                 <div>
-                  <p>Shipbuilding & Repair</p>
+                  <p style={{fontSize:fontSizenew}}>Shipbuilding & Repair</p>
                 </div>
 
                 <div>
-                  <p>Engineering</p>
+                  <p style={{fontSize:fontSizenew}}>Engineering</p>
                 </div>
 
                 <div>
-                  <p>Technical Training Center</p>
+                  <p style={{fontSize:fontSizenew}}>Technical Training Center</p>
                 </div>
 
               </div>
@@ -269,7 +300,7 @@ const Header = () => {
            onMouseLeave={() => setDropdown6(false)}
            className={styles.content_box}
           >
-            <p>Investor's Corner</p>
+            <p style={{fontSize:fontSizenew}}>Investor's Corner</p>
             <div className={styles.chevron_color}>
               <BiChevronDown />
             </div>
@@ -277,32 +308,32 @@ const Header = () => {
             {
               dropdown6 && <div className={styles.dropdown}>
                 <div>
-                  <p>Shipbuilding & Repair</p>
+                  <p style={{fontSize:fontSizenew}}>Shipbuilding & Repair</p>
                 </div>
 
                 <div>
-                  <p>Engineering</p>
+                  <p style={{fontSize:fontSizenew}}>Engineering</p>
                 </div>
 
                 <div>
-                  <p>Engine</p>
+                  <p style={{fontSize:fontSizenew}}>Engine</p>
                 </div>
 
                 <div>
-                  <p>Technical Training Center</p>
+                  <p style={{fontSize:fontSizenew}}>Technical Training Center</p>
                 </div>
 
 
                 <div>
-                  <p>Engineering</p>
+                  <p style={{fontSize:fontSizenew}}>Engineering</p>
                 </div>
 
                 <div>
-                  <p>Engine</p>
+                  <p style={{fontSize:fontSizenew}}>Engine</p>
                 </div>
 
                 <div>
-                  <p>Technical Training Center</p>
+                  <p style={{fontSize:fontSizenew}}>Technical Training Center</p>
                 </div>
 
               </div>
@@ -314,7 +345,7 @@ const Header = () => {
            onMouseLeave={() => setDropdown7(false)}
            className={styles.content_box}
           >
-            <p>Public Grievances</p>
+            <p style={{fontSize:fontSizenew}}>Public Grievances</p>
             <div className={styles.chevron_color}>
               <BiChevronDown />
             </div>
@@ -322,19 +353,19 @@ const Header = () => {
             {
               dropdown7 && <div className={styles.dropdown}>
                 <div>
-                  <p>Shipbuilding & Repair</p>
+                  <p style={{fontSize:fontSizenew}}>Shipbuilding & Repair</p>
                 </div>
 
                 <div>
-                  <p>Engineering</p>
+                  <p style={{fontSize:fontSizenew}}>Engineering</p>
                 </div>
 
                 <div>
-                  <p>Engine</p>
+                  <p style={{fontSize:fontSizenew}}>Engine</p>
                 </div>
 
                 <div>
-                  <p>Technical Training Center</p>
+                  <p style={{fontSize:fontSizenew}}>Technical Training Center</p>
                 </div>
 
               </div>
@@ -346,7 +377,7 @@ const Header = () => {
            onMouseLeave={() => setDropdown8(false)}
            className={styles.content_box}
           >
-            <p>CSR</p>
+            <p style={{fontSize:fontSizenew}}>CSR</p>
             <div className={styles.chevron_color}>
               <BiChevronDown />
             </div>
@@ -354,26 +385,26 @@ const Header = () => {
             {
               dropdown8 && <div className={styles.dropdown}>
                 <div>
-                  <p>Shipbuilding & Repair</p>
+                  <p style={{fontSize:fontSizenew}}>Shipbuilding & Repair</p>
                 </div>
 
                 <div>
-                  <p>Engineering</p>
+                  <p style={{fontSize:fontSizenew}}>Engineering</p>
                 </div>
 
                 <div>
-                  <p>Engine</p>
+                  <p style={{fontSize:fontSizenew}}>Engine</p>
                 </div>
 
                 <div>
-                  <p>Technical Training Center</p>
+                  <p style={{fontSize:fontSizenew}}>Technical Training Center</p>
                 </div>
 
               </div>
             }
           </div>
 
-          <p className={styles.contact}>Contact Us</p>
+          <p className={styles.contact} style={{fontSize:fontSizenew}}>Contact Us</p>
         </div>
       </nav>
     </>

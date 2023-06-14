@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './Hero.module.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import {FaChevronLeft,FaChevronRight} from 'react-icons/fa'
 import {BiArrowToLeft, BiArrowToRight} from 'react-icons/bi'
+import { ThemeContext } from '@/Context/ThemeContext';
+import { FontContext } from '@/Context/FontContext';
 
 const Hero = () => {
+
+  const { theme, changeToLightTheme, changeToDarkTheme, themeVariables} = useContext(ThemeContext);
+  const {size} = useContext(FontContext)
+
+  //font size variable
+  const fontSize1 = size 
 
   const customArrowPropsPrev = {
     // Define the styles for the custom arrows
@@ -16,7 +24,7 @@ const Hero = () => {
       transform: 'translateY(-50%)',
       zIndex: 2,
       cursor: 'pointer',
-      backgroundColor: "#07222e",
+      backgroundColor: theme === "light" ? "var(--primary-bg-light-color)" : "var(--primary-bg-dark-color)",
       padding: '10px',
       fontSize: '2rem',
       border:"none",
@@ -39,7 +47,7 @@ const Hero = () => {
       transform: 'translateY(-50%)',
       zIndex: 2,
       cursor: 'pointer',
-      backgroundColor: "#07222e",
+      backgroundColor: theme === "light" ? "var(--primary-bg-light-color)" : "var(--primary-bg-dark-color)",
       padding: '10px',
       fontSize: '2rem',
       border:"none",
@@ -141,7 +149,7 @@ const Hero = () => {
       </Carousel>
 
       <main className={styles.main_alert}>
-        <div className={styles.alert}>ALERT</div>
+        <div className={styles.alert} style={{fontSize:fontSize1}}>ALERT</div>
 
         <Carousel
       showThumbs={false}
@@ -179,13 +187,13 @@ const Hero = () => {
         <div
         className={styles.carousel_container2}
         >
-          <p>LAST DATE OF ONLINE SUBMISSION OF APPLICATIONS EXTENDED TILL 18 JUN 2023 FOR ALL POSTS UNDER  EN:2023/03(O) (URL)</p>
+          <p style={{fontSize:fontSize1}}>LAST DATE OF ONLINE SUBMISSION OF APPLICATIONS EXTENDED TILL 18 JUN 2023 FOR ALL POSTS UNDER  EN:2023/03(O) (URL)</p>
         </div>
 
         <div
         className={styles.carousel_container2}
         >
-          <p>ADDITION OF POSTS OF OFFICERS UNDER EN:2023/03(O) (Detailed Advertisement) (URL)</p>
+          <p style={{fontSize:fontSize1}}>ADDITION OF POSTS OF OFFICERS UNDER EN:2023/03(O) (Detailed Advertisement) (URL)</p>
         </div>
       </Carousel>
       </main>

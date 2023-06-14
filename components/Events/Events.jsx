@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from  './Events.module.css'
+import { ThemeContext } from '@/Context/ThemeContext'
+import { FontContext } from '@/Context/FontContext'
 
 const Events = () => {
+
+  const {themeVariables} = useContext(ThemeContext)
+  const {size} = useContext(FontContext)
+
+  //font size part
+  const fontsize1 = `calc(${size}px + 4px)`
+  const fontSize2 = size
   return (
     <>
-    <main className={styles.container}>
-        <p>Latest Events</p>
-        <div className={styles.content}>
+    <main className={styles.container}
+    style={{backgroundColor:themeVariables.backgroundColor2}}
+    >
+        <p style={{color:themeVariables.color,fontSize:fontsize1}}>Latest Events</p>
+        <div className={styles.content} style={{fontSize:fontSize2}}>
             <div>
                 <img src="https://www.grse.in/photo-gallery/pic/WED01.jpg" alt="" />
                 <div>
